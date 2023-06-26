@@ -56,7 +56,6 @@ public class PalaceBungee extends Plugin {
     @Getter private static ModerationUtil moderationUtil;
     @Getter private static PartyUtil partyUtil;
     @Getter private static PasswordUtil passwordUtil;
-    @Getter private static SlackUtil slackUtil;
 
     @Getter private static MongoHandler mongoHandler;
     @Getter private static MessageHandler messageHandler;
@@ -110,7 +109,6 @@ public class PalaceBungee extends Plugin {
         moderationUtil = new ModerationUtil();
         partyUtil = new PartyUtil();
         passwordUtil = new PasswordUtil();
-        slackUtil = new SlackUtil();
 
         setupShowReminder();
 
@@ -316,29 +314,29 @@ public class PalaceBungee extends Plugin {
         long d12 = Duration.between(zonedNow, zonedNext22_3).getSeconds();
 
         ScheduledExecutorService sch = Executors.newScheduledThreadPool(1);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 10am Show in 40 minutes!"), d1,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 10am Show in 40 minutes!"), d1,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 10am Show in 30 minutes!"), d2,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 10am Show in 30 minutes!"), d2,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 10am Show in 20 minutes!"), d3,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 10am Show in 20 minutes!"), d3,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 2pm Show in 40 minutes!"), d4,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 2pm Show in 40 minutes!"), d4,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 2pm Show in 30 minutes!"), d5,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 2pm Show in 30 minutes!"), d5,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 2pm Show in 20 minutes!"), d6,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 2pm Show in 20 minutes!"), d6,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 6pm Show in 40 minutes!"), d7,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 6pm Show in 40 minutes!"), d7,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 6pm Show in 30 minutes!"), d8,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 6pm Show in 30 minutes!"), d8,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 6pm Show in 20 minutes!"), d9,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 6pm Show in 20 minutes!"), d9,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 10pm Show in 40 minutes!"), d10,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 10pm Show in 40 minutes!"), d10,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 10pm Show in 30 minutes!"), d11,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 10pm Show in 30 minutes!"), d11,
                 24 * 60 * 60, TimeUnit.SECONDS);
-        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GREEN + "Please get ready to run the 10pm Show in 20 minutes!"), d12,
+        sch.scheduleAtFixedRate(new ShowReminder(ChatColor.GOLD + "Please get ready to run the 10pm Show in 20 minutes!"), d12,
                 24 * 60 * 60, TimeUnit.SECONDS);
     }
 }
